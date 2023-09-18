@@ -3,6 +3,7 @@ export interface PokemonTypes {
     image: string,
     url: string,
     moves: Move[],
+    id: number
 }
 
 interface Move {
