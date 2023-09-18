@@ -10,19 +10,19 @@ export interface PokemonCardProps {
     index: number
 }
 
-export const PokemonCard = ({loading, pokemon, index}: PokemonCardProps) => {
+export const PokemonCard = ({ loading, pokemon, index }: PokemonCardProps) => {
     return (
-        <Link to={`/pokemon/${pokemon.name}`}>
-        <Skeleton maxH="240px" isLoaded={!loading} display="flex" role="group" _hover={{ borderColor: "brand.900"} } border={"1px solid transparent"} flexDir="column" flex="1" rounded="lg" alignItems="center" boxShadow="2xl" p="4">
-            <Box>
-                <Image _groupHover={{transform: "translateY(-50%)"}} transform="translateY(-30%)"  
-                src={`${getPokemonImage(index+1)}`} alt={pokemon?.name} />
-            </Box>
-            <Flex w="full" justifyContent="space-between">
-                <Text fontSize='sm' _groupHover={{color: 'brand.900' }}>{pokemon?.name}</Text>
-             <ArrowRight  strokeWidth={1.75} />
-            </Flex>
-        </Skeleton>
+        <Link key={index} to={`/pokemon/${pokemon.name}`}>
+            <Skeleton maxH="240px" isLoaded={!loading} display="flex" role="group" _hover={{ borderColor: "brand.900" }} border={"1px solid transparent"} flexDir="column" flex="1" rounded="lg" alignItems="center" boxShadow="2xl" p="4">
+                <Box>
+                    <Image _groupHover={{ transform: "translateY(-50%)" }} transform="translateY(-30%)"
+                        src={`${getPokemonImage(index + 1)}`} alt={pokemon?.name} />
+                </Box>
+                <Flex w="full" justifyContent="space-between">
+                    <Text fontSize='sm' _groupHover={{ color: 'brand.900' }}>{pokemon?.name}</Text>
+                    <ArrowRight strokeWidth={1.75} />
+                </Flex>
+            </Skeleton>
         </Link>
     )
 }
