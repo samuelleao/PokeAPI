@@ -2,13 +2,13 @@ import { PokemonTypes } from "@/globalTypes/pokemon"
 import { Box, Flex, Image, Skeleton, Text } from "@chakra-ui/react"
 import { ArrowRight } from "lucide-react"
 
-export interface PokemonProps {
+export interface PokemonCardProps {
     loading?: boolean,
     pokemon: PokemonTypes,
     index: number
 }
 
-export const Pokemon = ({loading, pokemon, index}: PokemonProps) => {
+export const PokemonCard = ({loading, pokemon, index}: PokemonCardProps) => {
     return (
         <Skeleton maxH="240px" isLoaded={!loading} display="flex" role="group" _hover={{ borderColor: "brand.900"} } border={"1px solid transparent"} flexDir="column" flex="1" rounded="lg" alignItems="center" boxShadow="2xl" p="4">
             <Box>

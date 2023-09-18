@@ -1,4 +1,4 @@
-import { Pokemon } from "@/components/Pokemon"
+import { PokemonCard } from "@/components/PokemonCard"
 import { PokemonTypes } from "@/globalTypes/pokemon"
 import { getPokemons } from "@/services/getPokemons"
 import { Box, Button, Container, Flex, Grid, Image, Input, Text } from "@chakra-ui/react"
@@ -25,7 +25,7 @@ export const Home = () => {
             </Box>
             <Container as="main">
                 <Grid gridTemplateColumns="repeat(3,1fr)" gap="8" py="12">
-                    {pokemons?.results.map((pokemon, index) => <Pokemon pokemon={pokemon} index={index} loading={isLoading} />)}
+                    {pokemons?.results.map((pokemon, index) => <PokemonCard pokemon={pokemon} index={index} loading={isLoading} />)}
                 </Grid>
                 <Box>
                     {isError && <Text>Ocorreu algum erro, tente novamente mais tarde</Text>}
