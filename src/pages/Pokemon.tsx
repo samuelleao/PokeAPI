@@ -1,7 +1,7 @@
 import { PokemonTypes } from "@/globalTypes/pokemon";
 import { getPokemon } from "@/services/getPokemon";
 import { getPokemonImage } from "@/services/getPokemonImage";
-import { Box, Button, Container, Flex, Grid, Image, Progress, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Grid, Image, Progress, Text } from "@chakra-ui/react";
 import { useQuery } from "react-query";
 import { useNavigate, useParams } from "react-router-dom";
 

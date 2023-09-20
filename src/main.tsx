@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Home } from '@/pages/Home'
 import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from '@/ChakraTheme'
 import { QueryClient, QueryClientProvider } from 'react-query'
