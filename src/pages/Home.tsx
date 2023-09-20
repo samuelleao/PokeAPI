@@ -40,7 +40,7 @@ export const Home = () => {
                 </Container>
             </Box>
             <Container as="main">
-                <Grid gridTemplateColumns="repeat(3,1fr)" gap="8" py="12">
+                <Grid gridTemplateColumns={{base: "repeat(2,1fr)", lg:"repeat(3,1fr)"}} gap={{base:"4",lg:"8"}} py="12">
                     {pokemonsFiltered.length > 0 ? (
                         pokemonsFiltered.map((pokemon, index) => <PokemonCard key={index} pokemon={pokemon} index={index} loading={isLoading} />)
                     ): pokemons?.results.map((pokemon, index) => <PokemonCard key={index} pokemon={pokemon} index={index} loading={isLoading} />)}
